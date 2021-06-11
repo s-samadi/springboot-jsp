@@ -17,5 +17,15 @@ public class HomeController {
         model.addAttribute("message", "Spring Boot application that uses JSP With Embedded Tomcat");
         return View.HOME.getPath();
     }
+    
+    
+    // http --form POST http://localhost:8090/login emailAddress="test@gmail.com" password="password1" token="reflected"
+    @RequestMapping(value = "/login", method = RequestMethod.POST)
+	public String login(@RequestParam final String emailAddress, @RequestParam final String password, final Model model,
+			            @RequestParam final String token) {
+      model.addAttribute("message", "happy birthday");
+      model.addAttribute("token", token); // tainted
+      return "welcome";
+    }
 
 }
