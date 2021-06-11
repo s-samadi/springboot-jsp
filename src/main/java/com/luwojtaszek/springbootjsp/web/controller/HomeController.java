@@ -4,6 +4,8 @@ import com.luwojtaszek.springbootjsp.web.constant.View;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping; 
+import org.springframework.web.bind.annotation.RequestParam; 
 
 /**
  * Created by lukasz on 27.08.2017.
