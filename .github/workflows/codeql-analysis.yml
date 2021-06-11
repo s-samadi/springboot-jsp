@@ -73,8 +73,8 @@ jobs:
 
       # Before uploading the database as an artifact,
       # clean up its temporary data and zip it so the artifact is a single file.
-      - name: Clean up CodeQL database before upload
-        id: database-cleanup
+    - name: Clean up CodeQL database before upload
+      id: database-cleanup
         env:
           LANGUAGE: ${{ matrix.language }}
         run: |
